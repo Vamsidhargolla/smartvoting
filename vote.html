@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give Vote</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: white;
+        text-align: center;
+    }
+    .container {
+        max-width: 400px;
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 50px auto;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    .party-option {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        border-bottom: 1px solid #555;
+    }
+    .party-option:last-child {
+        border-bottom: none;
+    }
+    .party-option img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    .party-option label {
+        flex-grow: 1;
+        text-align: left;
+    }
+    button {
+        background-color: #00c4b3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #009688;
+    }
+    input[type="radio"] {
+    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+input[type="radio"]:checked {
+    background-color: #00c4b3; /* Change this color as needed */
+    border: 5px solid white;
+}
+.party-selection {
+    width: 650px; /* Increase box width */
+    background-color: #222; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+   <div class="container party-selection">
+    <h1>Give Your Vote</h1>
+    <form action="/submit-vote" method="POST">
+  
+      <input type="hidden" name="voterid" id="voterid" value="">
+  
+      <label>Select Your Party:</label>
+      <div class="party-list">
+  
+        <div class="party-option ycp">
+          <label>
+            <input type="radio" name="party" value="YCP" required>
+            Yuvajana Sramika Raithu Congress Party (YCP)
+            <img src="assests/YCP.jpg" alt="YCP Symbol" width="50"> 
+          </label>
+        </div>
+  
+        <div class="party-option tdp">
+          <label>
+            <input type="radio" name="party" value="TDP">Telugu Desham Party (TDP)
+            <img src="assests/TDP.jpg" alt="TDP Symbol" width="50"> 
+          </label>
+        </div>
+  
+        <div class="party-option brs">
+          <label>
+            <input type="radio" name="party" value="BRS">Bharatiya Rashtra Samithi (BRS)
+            <img src="assests/BRS.jpg" alt="BRS Symbol" width="50"> 
+          </label>
+        </div>
+  
+        
+        <div class="party-option jsp">
+          <label>
+            <input type="radio" name="party" value="JSP">Janasena Party (JSP)
+            <img src="assests/JSP.jpg" alt="JSP Symbol" width="50"> 
+          </label>
+        </div>
+        
+        <div class="party-option inc">
+          <label>
+            <input type="radio" name="party" value="INC">Indian National Congress (INC)
+            <img src="assests/INC.jpg" alt="INC Symbol" width="50"> 
+          </label>
+        </div>
+        
+  
+        <div class="party-option bjp">
+          <label>
+            <input type="radio" name="party" value="BJP">Bharatiya Janata Party (BJP)
+            <img src="assests/BJP.jpeg" alt="BJP Symbol" width="50"> 
+          </label>
+        </div>
+        
+  
+        <div class="party-option cpi">
+          <label>
+            <input type="radio" name="party" value="CPI">Communist Party of India (CPI)
+            <img src="assests/CPI.png" alt="CPI Symbol" width="50"> 
+          </label>
+        </div>
+        
+  
+        <div class="party-option cpm">
+          <label>
+            <input type="radio" name="party" value="CPM">Communist Party of India Marxist (CPM)
+            <img src="assests/CPM.jpg" alt="CPM Symbol" width="50"> 
+          </label>
+        </div>
+        
+      </div>
+      
+      <button type="submit">Submit Vote</button>
+    </form>
+   </div>
+</body>
+
+<script>
+  // Set voter ID dynamically
+  document.getElementById("voterid").value = localStorage.getItem("voterid");
+</script>
+</html>

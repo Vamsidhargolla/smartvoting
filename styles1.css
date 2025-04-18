@@ -1,0 +1,89 @@
+/* General Body Styles  font-weight: 700;
+  color: #3CBAB5;*/
+body {
+    background-color: #212533; /* Light dark black background */
+    color: #3CBAB5; /* SKU blue font color */
+    font-family: 'Arial', sans-serif;
+    font-weight: 700
+    /* margin: 0;
+    padding: 0; */
+  }
+  
+  /* Header Styles */
+  h1 {
+    color: #3CBAB5; /* SKU blue font color */
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  /* Input and Form Styles */
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  
+  form {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #5c6bc0; /* SKU blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  button:hover {
+    background-color: #8c652b; /* Darker SKU blue on hover */
+  }
+  
+  /* Link Styles */
+  a {
+    color: #5c6bc0; /* SKU blue link */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container for Forms */
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3a3f4b;
+    border-radius: 8px;
+  }
+  
+  /* Footer/Additional Styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2c2f3b;
+    color: #5c6bc0;
+  }
+  
+  /* Forgot Password Page Specific */
+  .forgot-password-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
